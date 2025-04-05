@@ -158,3 +158,72 @@ footer {
   margin: 0 1rem;
   text-decoration: none;
 }
+
+/* ========== Responsive Styles ========== */
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .cta-button {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive Hero Section */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Responsive Screenshot Grid */
+@media (max-width: 600px) {
+  .screenshot-box {
+    width: 100%;
+  }
+}
+
+/* Responsive Download Buttons */
+@media (max-width: 600px) {
+  .download-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-button {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* Footer Links on Mobile */
+@media (max-width: 600px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
