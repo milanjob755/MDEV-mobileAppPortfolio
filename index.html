@@ -14,6 +14,30 @@
       color: #333;
     }
 
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #6a5acd;
+    }
+
+    .nav-buttons button {
+      background-color: white;
+      color: #6a5acd;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #e6e6fa;
+    }
+
     header {
       background-color: #6a5acd;
       color: white;
@@ -29,6 +53,26 @@
     header p {
       margin-top: 0.5rem;
       font-size: 1.2rem;
+    }
+
+    .download-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .download-button a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .download-button a:hover {
+      background-color: #45a049;
     }
 
     .features,
@@ -59,14 +103,13 @@
     }
 
     .screenshot-grid {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1.5rem;
       justify-content: center;
     }
 
     .screenshot-item {
-      max-width: 250px;
       text-align: center;
     }
 
@@ -101,12 +144,21 @@
 </head>
 
 <body>
+  <div class="nav-buttons">
+    <button onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">Features</button>
+    <button onclick="document.getElementById('screenshots').scrollIntoView({behavior: 'smooth'})">Screenshots</button>
+    <button onclick="document.getElementById('comments').scrollIntoView({behavior: 'smooth'})">Comments</button>
+  </div>
+
   <header>
     <h1>My Journal</h1>
     <p>Your private, personal journaling companion</p>
+    <div class="download-button">
+      <a href="#">Download App</a>
+    </div>
   </header>
 
-  <section class="features">
+  <section id="features" class="features">
     <h2>Features</h2>
     <div class="feature-item">
       <h3>📝 Easy Journal Entries</h3>
@@ -126,37 +178,37 @@
     </div>
   </section>
 
-  <section class="screenshots">
+  <section id="screenshots" class="screenshots">
     <h2>App Screenshots</h2>
     <div class="screenshot-grid">
       <div class="screenshot-item">
         <img src="allEntries.jpeg" alt="All Entries Screenshot">
-        <div class="screenshot-caption">Entries Page</div>
+        <div class="screenshot-caption">allEntries.jpeg</div>
       </div>
       <div class="screenshot-item">
         <img src="deleteEntry.jpeg" alt="Delete Entry Screenshot">
-        <div class="screenshot-caption">Delete Entry</div>
+        <div class="screenshot-caption">deleteEntry.jpeg</div>
       </div>
       <div class="screenshot-item">
         <img src="home.jpeg" alt="Home Screen Screenshot">
-        <div class="screenshot-caption">Home Page</div>
+        <div class="screenshot-caption">home.jpeg</div>
       </div>
       <div class="screenshot-item">
         <img src="newEntry.jpeg" alt="New Entry Screenshot">
-        <div class="screenshot-caption">New Entry Page</div>
+        <div class="screenshot-caption">newEntry.jpeg</div>
       </div>
       <div class="screenshot-item">
         <img src="updateEntries.jpeg" alt="Update Entry Screenshot">
-        <div class="screenshot-caption">Update Entry</div>
+        <div class="screenshot-caption">updateEntries.jpeg</div>
       </div>
       <div class="screenshot-item">
         <img src="viewEntry.jpeg" alt="View Entry Screenshot">
-        <div class="screenshot-caption">View Entry</div>
+        <div class="screenshot-caption">viewEntry.jpeg</div>
       </div>
     </div>
   </section>
 
-  <section class="comments">
+  <section id="comments" class="comments">
     <h2>What Users Say</h2>
     <div class="comment">"Really clean UI, love how it auto-dates my logs!" - Student A</div>
     <div class="comment">"Perfect for daily reflections and journaling on the go." - User B</div>
