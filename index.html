@@ -58,18 +58,28 @@
       margin-bottom: 1rem;
     }
 
-    .screenshots img {
-      max-width: 100%;
+    .screenshot-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .screenshot-item {
+      max-width: 250px;
+      text-align: center;
+    }
+
+    .screenshot-item img {
+      width: 100%;
       height: auto;
-      margin: 0.5rem 0;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     .screenshot-caption {
-      text-align: center;
+      margin-top: 0.5rem;
       font-weight: bold;
-      margin-bottom: 1.5rem;
     }
 
     footer {
@@ -118,24 +128,31 @@
 
   <section class="screenshots">
     <h2>App Screenshots</h2>
-    <div>
-      <img src="allEntries.jpeg" alt="All Entries Screenshot">
-      <div class="screenshot-caption">allEntries.jpeg</div>
-
-      <img src="deleteEntry.jpeg" alt="Delete Entry Screenshot">
-      <div class="screenshot-caption">deleteEntry.jpeg</div>
-
-      <img src="home.jpeg" alt="Home Screen Screenshot">
-      <div class="screenshot-caption">home.jpeg</div>
-
-      <img src="newEntry.jpeg" alt="New Entry Screenshot">
-      <div class="screenshot-caption">newEntry.jpeg</div>
-
-      <img src="updateEntries.jpeg" alt="Update Entry Screenshot">
-      <div class="screenshot-caption">updateEntries.jpeg</div>
-
-      <img src="viewEntry.jpeg" alt="View Entry Screenshot">
-      <div class="screenshot-caption">viewEntry.jpeg</div>
+    <div class="screenshot-grid">
+      <div class="screenshot-item">
+        <img src="allEntries.jpeg" alt="All Entries Screenshot">
+        <div class="screenshot-caption">allEntries.jpeg</div>
+      </div>
+      <div class="screenshot-item">
+        <img src="deleteEntry.jpeg" alt="Delete Entry Screenshot">
+        <div class="screenshot-caption">deleteEntry.jpeg</div>
+      </div>
+      <div class="screenshot-item">
+        <img src="home.jpeg" alt="Home Screen Screenshot">
+        <div class="screenshot-caption">home.jpeg</div>
+      </div>
+      <div class="screenshot-item">
+        <img src="newEntry.jpeg" alt="New Entry Screenshot">
+        <div class="screenshot-caption">newEntry.jpeg</div>
+      </div>
+      <div class="screenshot-item">
+        <img src="updateEntries.jpeg" alt="Update Entry Screenshot">
+        <div class="screenshot-caption">updateEntries.jpeg</div>
+      </div>
+      <div class="screenshot-item">
+        <img src="viewEntry.jpeg" alt="View Entry Screenshot">
+        <div class="screenshot-caption">viewEntry.jpeg</div>
+      </div>
     </div>
   </section>
 
